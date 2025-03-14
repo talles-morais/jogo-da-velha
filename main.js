@@ -17,6 +17,12 @@ for (let i = 0; i < 3; i++) {
 
 while ((jogadas < 9) && (fimJogo === false)) {
     // b
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            process.stdout.write(`[${tab[i][j]}]`);
+        }
+        process.stdout.write("\n")      
+    }
     lin = parseInt(prompt(`${jogador} em [linha]:`))
     col = parseInt(prompt(`${jogador} em [coluna]:`))
     // c
