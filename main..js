@@ -8,15 +8,23 @@ var fimJogo = false
 var tab = [3]
 
 // a
-while((jogadas < 9) && (fimJogo === false)) {
+for (let i = 0; i < tab.length; i++) {
+    tab[i] = [' ', ' ', ' ']
+}
+
+while ((jogadas < 9) && (fimJogo === false)) {
     // b
+    tab.forEach((elem) => {
+        console.log(`[${elem}]`)
+    })
     lin = parseInt(prompt(`${jogador} em [linha]:`))
     col = parseInt(prompt(`${jogador} em [coluna]:`))
+    jogadas++;
     // c
 }
 
 // d
-if(vencedor === ' ') {
+if (vencedor === ' ') {
     console.log("empate\n");
 } else {
     console.log(`${vencedor} venceu`);
